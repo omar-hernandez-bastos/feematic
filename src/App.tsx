@@ -1,6 +1,6 @@
 import Loader from 'components/base/Loader'
 import Calculator from 'pages/Calculator'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { getRates } from 'services/axios'
 import { useLocalStorage } from 'usehooks-ts'
 import { getFixed } from 'utils'

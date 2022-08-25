@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://feematic-nest.herokuapp.com'
+const BASE_URL = 'https://feematic-nestjs.onrender.com'
 
 export const getRates = async () => {
   try {
