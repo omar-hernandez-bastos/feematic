@@ -3,9 +3,9 @@ const Loader = () => {
   return (
     <div className="flex justify-center items-center space-x-2 w-full h-full">
       <div className="flex">
-        <div className={`${circleCommonClasses} mr-1 animate-bounce`}></div>
-        <div className={`${circleCommonClasses} mr-1 animate-bounce200`}></div>
-        <div className={`${circleCommonClasses} animate-bounce400`}></div>
+        <div className={`${circleCommonClasses} mr-1 animate-bounce`} />
+        <div className={`${circleCommonClasses} mr-1 animate-bounce200`} />
+        <div className={`${circleCommonClasses} animate-bounce400`} />
       </div>
     </div>
   )

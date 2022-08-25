@@ -17,8 +17,8 @@ const Calculator = () => {
       <ModalRates />
       <div className="flex flex-col justify-evenly p-8 w-full h-full">
         <div className="flex flex-col justify-center items-end w-full min-h-[30%]">
-          <Operation amount={amount}></Operation>
-          <Result amount={amount}></Result>
+          <Operation amount={amount} />
+          <Result amount={amount} />
         </div>
         <div className="grid flex-auto grid-cols-4 gap-3 w-full max-h-[60%]">
           {pads.map(({ id, text, className, color }) => (
@@ -30,7 +30,7 @@ const Calculator = () => {
               text={text}
               color={color}
               isActive={amount.currency === text}
-            ></Pad>
+             />
           ))}
         </div>
       </div>
