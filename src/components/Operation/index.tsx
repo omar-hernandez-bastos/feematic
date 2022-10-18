@@ -6,7 +6,7 @@ interface Props {
   amount: Amount
 }
 
-const Operation = ({ amount }: Props) => {
+function OperationComponent({ amount }: Props) {
   const text = `${formatMoney(Number(amount.value))}${amount.currency}`
   // Get small text class if text is so long
   const getTextResponsive = () => {
@@ -26,4 +26,4 @@ const Operation = ({ amount }: Props) => {
   )
 }
 
-export default Operation
+export default OperationComponent

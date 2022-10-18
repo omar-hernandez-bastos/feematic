@@ -12,7 +12,7 @@ export interface Amount {
   currency: string
 }
 
-const Calculator = () => {
+function CalculatorComponent() {
   const { onPressPad, amount } = useAmount()
 
   const [customRates] = useLocalStorage(CUSTOM_RATES, false)
@@ -49,4 +49,4 @@ const Calculator = () => {
   )
 }
 
-export default Calculator
+export default CalculatorComponent
