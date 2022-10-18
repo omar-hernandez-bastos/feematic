@@ -16,7 +16,8 @@ const Calculator = () => {
   const { onPressPad, amount } = useAmount()
 
   const [customRates] = useLocalStorage(CUSTOM_RATES, false)
-  const isActive = (text: string) => {
+  //Get if pad must has active class
+  const getIsActive = (text: string) => {
     return (
       (text === ActionsPad.CREDIT_CARD && customRates) ||
       amount.currency === text
@@ -39,7 +40,7 @@ const Calculator = () => {
               onClick={() => onPressPad(text)}
               text={text}
               color={color}
-              isActive={isActive(text)}
+              isActive={getIsActive(text)}
             />
           ))}
         </div>

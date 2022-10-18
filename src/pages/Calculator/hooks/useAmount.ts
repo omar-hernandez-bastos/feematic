@@ -51,13 +51,14 @@ export const useAmount = () => {
           })
     }
     if (value === ActionsPad.CREDIT_CARD) {
+      //Add fees to COP and VES rates
       const setFees = (isAdd: boolean) => {
         const newCop = cop + cop * MASTER_CARD_FEE * (isAdd ? 1 : -1)
         setCop?.(newCop)
-        setCustomCop(getFixed(+newCop))
+        setCustomCop(getFixed(Number(newCop)))
         const newVes = ves + ves * MASTER_CARD_FEE * (isAdd ? 1 : -1)
         setVes?.(newVes)
-        setCustomVes(getFixed(+newVes))
+        setCustomVes(getFixed(Number(newVes)))
         return setCustomRates(!isAdd)
       }
       return setFees(customRates)

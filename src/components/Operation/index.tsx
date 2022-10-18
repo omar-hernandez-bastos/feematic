@@ -7,7 +7,8 @@ interface Props {
 }
 
 const Operation = ({ amount }: Props) => {
-  const text = `${formatMoney(+amount.value)}${amount.currency}`
+  const text = `${formatMoney(Number(amount.value))}${amount.currency}`
+  // Get small text class if text is so long
   const getTextResponsive = () => {
     if (text.length > 18) {
       return 'text-2xl'

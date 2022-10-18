@@ -11,7 +11,7 @@ export interface OpenExchangeAPI {
   base?: string
   rates?: Rates
 }
-
+//Fetch rates from OpenExchange API
 export const getRates = async (): Promise<Rates> => {
   try {
     const url = `https://openexchangerates.org/api/latest.json?app_id=${

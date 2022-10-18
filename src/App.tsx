@@ -1,4 +1,3 @@
-import Loader from 'components/base/Loader'
 import Calculator from 'pages/Calculator'
 import { useState, useEffect } from 'react'
 import { getRates } from 'services/OpenExchange'
@@ -19,13 +18,14 @@ function App() {
   const [customVes, setCustomVes] = useLocalStorage(CUSTOM_VES, cop)
 
   useEffect(() => {
+    //Fetch Rates from server and update states
     const fetchRates = async () => {
       try {
         const { COP: cop, VES: ves } = await getRates()
-        setCop(getFixed(+cop))
-        setCustomCop(getFixed(+cop))
-        setVes(getFixed(+ves))
-        setCustomVes(getFixed(+ves))
+        setCop(getFixed(Number(cop)))
+        setCustomCop(getFixed(Number(cop)))
+        setVes(getFixed(Number(ves)))
+        setCustomVes(getFixed(Number(ves)))
         setCustomRates(false)
       } catch (error) {
         console.error(error)
@@ -34,8 +34,8 @@ function App() {
 
     if (!customRates) fetchRates()
     else {
-      setCop(getFixed(+customCop))
-      setVes(getFixed(+customVes))
+      setCop(getFixed(Number(customCop)))
+      setVes(getFixed(Number(customVes)))
     }
   }, [customRates])
 
