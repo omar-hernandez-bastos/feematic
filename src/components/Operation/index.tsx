@@ -7,12 +7,20 @@ interface Props {
 }
 
 const Operation = ({ amount }: Props) => {
-  /*   const regex = /[0-9]/g */
-  /*   const textArr = [...amount.value] */
+  const text = `${formatMoney(+amount.value)}${amount.currency}`
+  const getTextResponsive = () => {
+    if (text.length > 18) {
+      return 'text-2xl'
+    }
+    if (text.length > 12) {
+      return 'text-3xl'
+    }
+
+    return 'text-5xl'
+  }
   return (
-    <div className="text-5xl font-bold text-right text-white">
-      {formatMoney(+amount.value)}
-      {amount.currency}
+    <div className={`${getTextResponsive()} font-bold text-right text-white`}>
+      {text}
     </div>
   )
 }
