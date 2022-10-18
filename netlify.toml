@@ -4,7 +4,7 @@ NODE_VERSION = "16.13.0"
 
 [build]
 publish = "dist"
-command = "npm install && npm run build && npm run test"
+command = "npm install --force && npm run build && npm run test"
 
 [[redirects]]
 from = "/*"
