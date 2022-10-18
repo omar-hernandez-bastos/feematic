@@ -1,7 +1,8 @@
 export enum ActionsPad {
   CLEAR = 'AC',
   C = 'C',
-  DECIMAL = '.'
+  DECIMAL = '.',
+  CREDIT_CARD = '💳'
 }
 export const pads = [
   { id: 1, text: '🇨🇴', className: 'col-span-2', color: 'cyan-200' },
@@ -9,17 +10,18 @@ export const pads = [
   { id: 4, text: '7', className: '' },
   { id: 5, text: '8', className: '' },
   { id: 6, text: '9', className: '' },
-  { id: 3, text: '🇻🇪', className: 'row-span-2' },
+  { id: 3, text: '🇻🇪', className: '' },
   { id: 7, text: '4', className: '' },
   { id: 8, text: '5', className: '' },
   { id: 9, text: '6', className: '' },
+  { id: 3, text: '💳', className: '' },
   { id: 10, text: '1', className: '' },
   { id: 11, text: '2', className: '' },
   { id: 12, text: '3', className: '' },
   { id: 13, text: ActionsPad.C, className: '' },
   { id: 14, text: '0', className: 'col-span-2' },
   { id: 15, text: ActionsPad.DECIMAL, className: '' },
-  { id: 13, text: ActionsPad.CLEAR, className: '' }
+  { id: 16, text: ActionsPad.CLEAR, className: '' }
 ]
 
 export type CURRENCIES = '🇨🇴' | '🇺🇸' | '🇻🇪'

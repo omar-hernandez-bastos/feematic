@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { getRates } from './axios'
+import { getRates } from './OpenExchange'
 
 jest.mock('axios')
 describe('Axios Test', () => {
